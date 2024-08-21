@@ -3,16 +3,6 @@ import { useState, useEffect } from 'react'
 import { User } from './model/user.model';
 
 export default function Home() {
-  // const callAPI = async () => {
-  //   try {
-  //     const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
-  //     const data = await res.json();
-  //     console.log(data);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
@@ -23,7 +13,7 @@ export default function Home() {
       });
   }, []);
 
-  const list:any[] = [];
+  const list: any[] = [];
   users.forEach((user) => {
     list.push(
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
